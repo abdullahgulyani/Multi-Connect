@@ -1,0 +1,11 @@
+.image{
+  height:990px;
+  width:100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url('..//assets/images/black-business-computer-desk.jpg');
+  background-position:30%;
+  margin-top: 0px;
+  margin-bottom: -57%;
+}
+

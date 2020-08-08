@@ -1,0 +1,42 @@
+<div class="form" style="position:relative;width:105%;height:460px; margin-bottom: -200px; margin-left: -120px;">
+  <div class="style">
+    <img src="../../assets/images/avatar.png" style="position:absolute;left:135px;width:30%; height:18%; top:-70px; ">
+  <mat-spinner *ngIf="isLoading"  style="margin-left: 45%; margin-top: 200px;"></mat-spinner>
+  <form style="position:relative;top:200px;left:300px;" (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+    <p style="position:relative;top:-178px;left:-170px;color:white;font-size:30px;font-family:Comic Sans MS">Login Form</p><br>
+    <div style="color: white; margin-left: 4%; ">
+      <i  class="fa fa-eye" aria-hidden="true" matSuffix (click)="hide= !hide">
+        {{hide ? 'visibilty':'visibilty_off'}}
+       </i>
+       </div>
+    <p style="position:relative;top:-190px;left:-265px;color:white;font-size:20px;font-family:Comic Sans MS">Email ID:</p><br>
+
+    <input  name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email style="position:relative;left:-270px;top:-205px;color:black;background-color:#e0ebeb;width:72%;height:35px;border:none;border-top:none;border-radius:20px;font-family:sans-serif;font-size:20px;">
+    <br>
+
+    <div class="Error">
+      <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
+
+    </div>
+    <p style="position:relative;top:-195px;left:-260px;color:white;font-size:20px;font-family:Comic Sans MS">Password:</p><br>
+
+    <input name="password" [type]="hide ? 'password':'text'" ngModel type="password" placeholder="Password" #passwordInput="ngModel" required style="position:relative;left:-270px;top:-205px;color:black;background-color:#e0ebeb;width:72%;height:35px;border:none;border-radius:20px;font-family:sans-serif;font-size:20px;">
+    <br><br>
+    <div class="Error1">
+      <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
+
+    </div>
+
+
+    <button  style="position:relative;left:-210px;top:-190px;color:white;background-color:#2773a7;width:48%;height:40px;border:none;border-radius:10px;font-family:sans-serif;font-size:22px;opacity:1" mat-raised-button type="submit" *ngIf="!isLoading">Login</button>
+    <p  style="color: blanchedalmond; margin-left: -210px; margin-top: -160px;">Don't have account? </p>
+    <button  style="top: -45px; margin-left: 3px; color: blanchedalmond;"  mat-button routerLink="/signup">signup
+      <!--         Sign Up font icon -->
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+      </button>
+  </form>
+
+  </div>
+
+  </div>
+

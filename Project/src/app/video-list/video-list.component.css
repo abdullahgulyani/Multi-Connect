@@ -1,0 +1,67 @@
+*{
+  margin: 0px;
+  padding: 0px;
+ }
+ body{
+   background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg);
+   background-size: cover;
+   font-family: arial;
+   animation: color-change 10s linear infinite;
+
+ }
+
+ @keyframes color-change
+ {
+   0%, 100% {
+     filter: hue-rotate(0deg)
+   }
+   50% {
+     filter: hue-rotate(360deg)
+   }
+ }
+
+ .main{
+
+  margin-top: 24.5%;
+  margin-bottom: -29.7%;
+ }
+
+ .card{
+      width: 20%;
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: 2px 2px 20px black;
+      border-radius: 5px;
+      margin: 12%;
+      background: white;
+     }
+
+ .image img{
+   width: 100%;
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+
+
+
+  }
+
+ .title{
+
+   text-align: center;
+   padding: 10px;
+   background: white;
+
+  }
+
+ h1{
+   font-size: 20px;
+  }
+
+ .des{
+   padding: 3px;
+   text-align: center;
+   background: white;
+   padding-top: 10px;
+   border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+ }

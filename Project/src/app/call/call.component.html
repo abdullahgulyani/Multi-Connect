@@ -1,0 +1,27 @@
+<div *ngIf="!session" id="join">
+  <div id="join-dialog">
+    <h1 style="color: white; margin-top: 15%; font-size: 50px;">Join a Conference</h1>
+
+    <form (submit)="joinSession()">
+      <p>
+        <label style="color:white; font-size: 20px; top: -20%;">Participant </label>
+        <input type="text" id="userName" name="userName" [(ngModel)]="myUserName" required>
+      </p>
+      <p>
+        <label style="color:white; font-size: 20px;">Session </label>
+        <input type="text" id="sessionId" name="sessionId" [(ngModel)]="mySessionId" required>
+      </p>
+      <p class="text-center">
+        <input style="background-color:#2773a7 ;" type="submit" name="commit" value="Join!">
+      </p>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="session" id="session">
+  <opv-session #ovSessionComponent [sessionName]="mySessionId" [user]="myUserName" [tokens]="tokens"
+    (sessionCreated)="handlerSessionCreatedEvent($event)" (participantCreated)="handlerPublisherCreatedEvent($event)" (error)="handlerErrorEvent($event)">
+  </opv-session>
+
+  <!-- <opv-session [sessionName]="mySessionId" [user]="myUserName" [openviduServerUrl]="'https://localhost:4443'" [openviduSecret]="'MY_SECRET'"></opv-session> -->
+</div>

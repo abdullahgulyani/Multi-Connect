@@ -1,0 +1,41 @@
+
+<div class="form" style="position:relative;width:105%;height:460px; margin-bottom: -200px; margin-left: -120px;">
+
+  <div class="style">
+    <img src="../../assets/images/avatar.png" style="position:absolute;left:130px;width:30%; height:18%; top:-80px;  ">
+  <mat-spinner *ngIf="isLoading"  style="margin-left: 45%; margin-top: 200px;"></mat-spinner>
+  <form style="position:relative;top:200px;left:300px;" (submit)="onSignup(signupForm)" #signupForm="ngForm" *ngIf="!isLoading">
+    <p style="position:relative;top:-165px;left:-200px;color:white;font-size:30px;font-family:Comic Sans MS">Create an Account</p><br>
+    <p style="position:relative;top:-173px;left:-160px;color:white;font-size:30px;font-family:Comic Sans MS">Signup Form</p><br>
+    <p style="position:relative;top:-190px;margin-left:-263px;color:white;font-size:20px;font-family:Comic Sans MS">Name:</p><br>
+    <input  name="name" ngModel type="name" placeholder="NAME" style="position:relative;left:-270px;top:-195px;color:black;background-color:#e0ebeb;width:72%;height:35px;border:none;border-radius:20px;font-family:sans-serif;font-size:20px;">
+    <div style="color: white; margin-left: 8%;">
+      <i  class="fa fa-eye" aria-hidden="true" matSuffix (click)="hide= !hide">
+        {{hide ? 'visibilty':'visibilty_off'}}
+       </i>
+       </div>
+    <p style="position:relative;top:-190px;left:-265px;color:white;font-size:20px;font-family:Comic Sans MS">Email ID:</p><br>
+    <input  name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email style="position:relative;left:-270px;top:-198px;color:black;background-color:#e0ebeb;width:72%;height:35px;border:none;border-top:none;border-radius:20px;font-family:sans-serif;font-size:20px;">
+    <br>
+
+    <div class="Error">
+      <mat-error *ngIf="emailInput.invalid">Please enter a  email with pattern @gmail.com.</mat-error>
+
+    </div>
+    <p style="position:relative;top:-190px;left:-260px;color:white;font-size:20px;font-family:Comic Sans MS">Password:</p><br>
+    <input name="password"[type]="hide ? 'password':'text'" ngModel type="password" placeholder="Password" #passwordInput="ngModel"  ngModel required minlength="5" maxlength="25" style="position:relative;left:-270px;top:-198px;color:black;background-color:#e0ebeb;width:72%;height:35px;border:none;border-radius:20px;font-family:sans-serif;font-size:20px;"/>
+    <div class="Error1">
+      <mat-error *ngIf="passwordInput.invalid" >Please enter a  password greater the 5 and less then 25.</mat-error>
+    </div>
+
+    <br><br>
+    <button  style="position:relative;left:-210px;top:-225px;color:white;background-color:#2773a7;width:48%;height:40px;border:none;border-radius:10px;font-family:sans-serif;font-size:22px;opacity:1" mat-raised-button type="submit" *ngIf="!isLoading">Signup</button>
+    <button style="color: blanchedalmond; top: -235px; left: -170px;" mat-button routerLink="/login">login
+      <!--         Sign Up font icon -->
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+      </button>
+  </form>
+
+  </div>
+
+  </div>

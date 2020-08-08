@@ -1,0 +1,32 @@
+html {
+	position: absolute;
+	min-height: 50%;
+}
+
+#join {
+  text-align: center;
+  height: 20px;
+	width: 50%;
+  z-index: 1;
+	background-color: #4d4d4d !important;
+	border-color: #4d4d4d !important;
+	border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+
+}
+
+#join,
+#session {
+  position: absolute;
+  margin: auto;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70%;
+  width: 50%;
+}
+
+
+
+

@@ -1,0 +1,27 @@
+
+.back{
+
+  position:relative;
+  top: -291px;
+  border-radius:0px;
+  background-image:url("../../assets/images/p.jpg");
+  background-repeat:repeat-x;
+  background-position: right top;
+  background-attachment:scroll;
+  background-size:cover;
+  }
+
+  .vl {
+    border-left: 1.2px solid black;
+    height: 280px;
+    position: absolute;
+    left: 47%;
+    margin-left: -3px;
+    top: 16px;
+  }
+
+  .back1{
+  position:relative;
+  top:385px;
+  border-radius:0px;
+  }
